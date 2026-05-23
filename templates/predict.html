@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ASL Prediction</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f5f7fa;
+}
+
+.container{
+    width:520px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#111;
+    margin-bottom:10px;
+    font-size:32px;
+}
+
+p{
+    color:#666;
+    margin-bottom:20px;
+    line-height:1.6;
+    font-size:14px;
+}
+
+input[type="file"]{
+    width:100%;
+    padding:12px;
+    border:2px dashed #ccc;
+    border-radius:10px;
+    margin-bottom:20px;
+    background:#fafafa;
+}
+
+button{
+    background:#000;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#333;
+    transform:scale(1.05);
+}
+
+.result{
+    margin-top:25px;
+    padding:20px;
+    background:#f8f9fa;
+    border-radius:15px;
+}
+
+.prediction{
+    font-size:28px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:10px;
+}
+
+img{
+    margin-top:15px;
+    width:220px;
+    border-radius:10px;
+    border:2px solid #eee;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.back{
+    display:block;
+    margin-top:20px;
+    color:#000;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.back:hover{
+    color:#333;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>ASL Prediction</h1>
+
+    <p>Upload an image of a hand gesture (A–J) to get prediction</p>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="file" required>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    {% if prediction %}
+
+    <div class="result">
+
+        <div class="prediction">
+            Prediction: {{ prediction }}
+        </div>
+
+        <img src="{{ image_path }}">
+
+    </div>
+
+    {% endif %}
+
+    <a class="back" href="/">← Back to Home</a>
+
+</div>
+
+</body>
+</html>

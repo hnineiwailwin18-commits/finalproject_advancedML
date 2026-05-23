@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ASL Recognition System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f5f7fa;
+}
+
+.container{
+    width:700px;
+    background:white;
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1{
+    font-size:42px;
+    color:#111;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:18px;
+    color:#555;
+    margin-bottom:25px;
+}
+
+.description{
+    font-size:16px;
+    color:#666;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.info-box{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:35px;
+}
+
+.card{
+    background:#f8f9fa;
+    padding:20px;
+    border-radius:15px;
+    width:180px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h3{
+    font-size:16px;
+    margin-top:10px;
+    color:#111;
+}
+
+.card p{
+    font-size:13px;
+    color:#666;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 32px;
+    background:#000;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#333;
+    transform:scale(1.05);
+}
+
+.footer{
+    margin-top:25px;
+    font-size:12px;
+    color:#999;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>ASL Recognition System</h1>
+
+    <div class="subtitle">
+        American Sign Language Alphabet Classification using Deep Learning
+    </div>
+
+    <div class="description">
+        This project uses a Convolutional Neural Network (CNN) to classify
+        ASL hand gestures into alphabets (A–J). Users can upload an image
+        and get real-time predictions with confidence scores.
+    </div>
+
+    <div class="info-box">
+
+        <div class="card">
+            <div></div>
+            <h3>CNN Model</h3>
+            <p>Deep learning-based image classification</p>
+        </div>
+
+        <div class="card">
+            <div></div>
+            <h3>82% Accuracy</h3>
+            <p>Validation performance</p>
+        </div>
+
+        <div class="card">
+            <div></div>
+            <h3>Fast Prediction</h3>
+            <p>Instant image classification</p>
+        </div>
+
+    </div>
+
+    <a href="/predict-page" class="btn">Start Prediction</a>
+
+    <div class="footer">
+        Final ML Project • ASL Classification
+    </div>
+
+</div>
+
+</body>
+</html>
